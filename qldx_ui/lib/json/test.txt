@@ -1,0 +1,25 @@
+showDialog(
+                          context: context,
+                          builder: (context) => AlertDialog(
+                            content: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Name: ${racer.name}'),
+                                Text('Date: ${racer.date.toString()}'),
+                                Text('Tel: ${racer.tel}'),
+                                Text('Email: ${racer.email}'),
+                                Text('Team: ${racer.team}'),
+                                Text('Address: ${racer.address}'),
+                              ],
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                },
+                                child: const Text('Close'),
+                              ),
+                            ],
+                          ),
+                        );
